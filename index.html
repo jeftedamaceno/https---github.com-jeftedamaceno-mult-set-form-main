@@ -18,7 +18,7 @@
     <div class="botoes">
       <ul>
         <li>  
-          <button class="botao">1</button>
+          <button class="botao botao_ativado">1</button>
           <div class="botao-texto">
             <p class="step">Step 1 </p>
             <p>Your info</p>
@@ -48,15 +48,60 @@
       </ul>
     </div>
     <form>
-      <h1>Personal info</h1>
-      <p>Please provide your name, email address, and phone number.</p>
-      <label for="">Name</label>
-      <input type="text" placeholder="e.g. Stephen King">
-      <label for="">Email Address</label>
-      <input type="text" placeholder="e.g. stephenking@lorem.com">
-      <label for="">Phone Number</label>
-      <input type="text" placeholder="e.g. +1 234 567 890">
-      <button>Next Step</button>
+      <div class="personal_info desativado">
+        <h1>Personal info</h1>
+        <p>Please provide your name, email address, and phone number.</p>
+        <label for="">Name</label>
+        <input type="text" placeholder="e.g. Stephen King">
+        <label for="">Email Address</label>
+        <input type="text" placeholder="e.g. stephenking@lorem.com">
+        <label for="">Phone Number</label>
+        <input type="text" placeholder="e.g. +1 234 567 890">
+        <button>Next Step</button>
+      </div>
+      <div class="step2 ">
+        <h1>Select your plan</h1>
+        <p>You have the option of monthly or yearly billing.</p>
+        <div class="radio-image">
+          <div class="radio-plano">
+            <label for="arcade">
+              <input type="radio" name="plano" id="arcade" value="arcade">
+              <img src="./src/assets/images/icon-arcade.svg" alt="Feminino">
+              <p class="titulo-plano">Arcade</p>
+              <p> $9/mo</p>
+            </label>
+          </div>
+          <div class="radio-plano">
+            <label for="advanced">
+              <input type="radio" name="plano" id="advanced" value="advanced">
+              <img src="./src/assets/images/icon-advanced.svg" alt="Masculino">
+              <p class="titulo-plano">Advanced</p>
+              <p> $9/mo</p>
+            </label>
+          </div>
+          <div class="radio-plano">
+            <label for="pro">
+              <input type="radio" name="plano" id="pro" value="pro">
+              <img src="./src/assets/images/icon-pro.svg" alt="pro">
+              <p class="titulo-plano">Pro</p>
+              <p> $9/mo</p>
+            </label>
+          </div>
+        </div>
+        <div class="check-switch">
+          <div class="input-checkbox">
+            <p class="input-seleceinado"><b>Monthly</b></p>
+            <label for="switch">
+              <input type="checkbox" name="switch" id="switch">
+              <i></i>
+            </label>
+            <p><b>Yearly</b></p>
+          </div>
+        </div>
+        <button class="bo-back">Go Back</button>
+        <button>Next Step</button>
+      </div>
+      <!-- <button>Next Step</button> -->
     </form>
   </div>
 </main>
