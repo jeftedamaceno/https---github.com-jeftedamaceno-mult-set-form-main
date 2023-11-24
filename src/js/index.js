@@ -9,12 +9,29 @@ steps.forEach((step, indice)=>{
         paginas[indice].classList.add("pagina-selecionada");
     });
 })
+
+//  criando borda para input selecionado
+
+const radios = document.querySelectorAll('.radio-plano')
+
+radios.forEach((radio,)=>{
+    radio.addEventListener('click', ()=>{
+        desselecionarRadio();
+        radio.classList.add("radio-selecionado"); 
+    });
+});
+
 function desselecionarPagina() {
-    const personagemSelecionado = document.querySelector(".pagina-selecionada");
-    personagemSelecionado.classList.remove("pagina-selecionada");
+    const paginaSelecionado = document.querySelector(".pagina-selecionada");
+    paginaSelecionado.classList.remove("pagina-selecionada");
 }
 function desselecionarStep() {
-    const botaoSelecionado = document.querySelector(".botao_ativado");
-    botaoSelecionado.classList.remove("botao_ativado");
-    
+    const stepSelecionado = document.querySelector(".botao_ativado");
+    stepSelecionado.classList.remove("botao_ativado");
+}
+function desselecionarRadio() {
+    if(document.querySelector(".radio-plano.radio-selecionado")){
+        const radioSelecionado = document.querySelector(".radio-plano.radio-selecionado");
+        radioSelecionado.classList.remove("radio-selecionado");
+    }
 }

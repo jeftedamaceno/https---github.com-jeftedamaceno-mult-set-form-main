@@ -90,7 +90,7 @@ form .personal_info form label{
     display: flex; */
 }
 form .personal_info input{
-    width: 400px;
+    width: 420px;
     height: 50px;
     text-align: center;
     border-radius: 10px;
@@ -187,7 +187,7 @@ form .step2 label > input{
 }
 
 .radio-selecionado{
-    border:2px solid hsl(213, 96%, 18%); 
+    border:2px solid hsl(243, 100%, 62%); 
     display: flex;
 }
 /* criando input checkbox */
@@ -239,10 +239,11 @@ form .step2 label > input{
 }
 .check-switch .input-seleceinado{
     color: hsl(213, 96%, 18%); 
+    opacity: 1;
 }
-.check-switch:checked + p{
+/* .input-seleceinado input:checked + p{
     color: aqua;
-}
+} */
 /* .radio-image label input + .radio-plano{
     cursor:pointer;
     border:2px solid #EEE;
