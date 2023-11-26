@@ -10,7 +10,7 @@ steps.forEach((step, indice)=>{
     });
 })
 
-//  criando borda para input selecionado
+//  criando borda para input type radiio selecionado
 
 const radios = document.querySelectorAll('.radio-plano')
 
@@ -21,6 +21,21 @@ radios.forEach((radio,)=>{
     });
 });
 
+// criando alteracao de texto ao clicar em input type checkbox
+
+const checkbox_time = document.querySelector('#switch');
+const months = document.querySelectorAll('.check-monthly');
+const years = document.querySelectorAll('.check-year.desativado');
+
+checkbox_time.addEventListener('click', ()=>{
+    if(months[0].classList.contains('desativado')){
+        alteraTextoCheckbox(months, years)
+    }else{
+        alteraTextoCheckbox(years, months)
+    }
+});
+
+// funcoes usadas
 function desselecionarPagina() {
     const paginaSelecionado = document.querySelector(".pagina-selecionada");
     paginaSelecionado.classList.remove("pagina-selecionada");
@@ -34,4 +49,11 @@ function desselecionarRadio() {
         const radioSelecionado = document.querySelector(".radio-plano.radio-selecionado");
         radioSelecionado.classList.remove("radio-selecionado");
     }
+}
+function alteraTextoCheckbox(lista_check1, lista_check2) {
+    lista_check1.forEach((lista,indice)=>{ 
+        console.log('oi')
+        lista.classList.remove('desativado')
+        lista_check2[indice].classList.add('desativado')
+    });
 }

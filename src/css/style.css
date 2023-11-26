@@ -142,7 +142,7 @@ form .step2 label > input{
     width: 100px;
 }
 .radio-plano{    
-    border:2px solid rgb(214, 211, 211);
+    border:1px solid rgb(214, 211, 211);
     float: left;
     height: 150px;
     width: 130px;
@@ -161,7 +161,6 @@ form .step2 label > input{
 }
 
 .radio-plano .radio-image label{
-    /* border:2px solid #EEE; */
     padding:10px;
     height: 200px;
     width: 200px;
@@ -169,7 +168,7 @@ form .step2 label > input{
 }
 
 .radio-image > div:hover{
-    border:2px solid hsl(213, 96%, 18%);
+    border:1px solid hsl(213, 96%, 18%);
 }
 .radio-image label img{
     height: 35px;
@@ -185,9 +184,15 @@ form .step2 label > input{
 .radio-plano p{   
     margin-left: 20px;
 }
-
+.check-year .check-year-bid{
+    color: hsl(213, 96%, 18%);
+    opacity: 1;
+}
+.check-monthly{
+    margin-top: 5px;
+}
 .radio-selecionado{
-    border:2px solid hsl(243, 100%, 62%); 
+    border:1px solid hsl(243, 100%, 62%); 
     display: flex;
 }
 /* criando input checkbox */
@@ -241,30 +246,3 @@ form .step2 label > input{
     color: hsl(213, 96%, 18%); 
     opacity: 1;
 }
-/* .input-seleceinado input:checked + p{
-    color: aqua;
-} */
-/* .radio-image label input + .radio-plano{
-    cursor:pointer;
-    border:2px solid #EEE;
-    border-radius:15px;
-    padding:10px;
-    height: 50px;
-    width: 50px;
-} */
-/* .radio-image label >input + img{
-    cursor:pointer;
-    border:2px solid #EEE;
-    border-radius:15px;
-    padding:10px;
-    height: 50px;
-    width: 50px;
-} */
-/* .radio-image label > input:checked + img{
-    border:2px solid hsl(213, 96%, 18%); 
-    display: flex;   
-} */
-/* .radio-image label input:checked+img{
-    border:2px solid hsl(213, 96%, 18%); 
-    display: flex;   
-} */

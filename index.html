@@ -48,7 +48,7 @@
       </ul>
     </div>
     <form>
-      <div class="personal_info pagina pagina-selecionada">
+      <div class="personal_info pagina">
         <h1>Personal info</h1>
         <p>Please provide your name, email address, and phone number.</p>
         <label for="">Name</label>
@@ -59,7 +59,7 @@
         <input type="text" placeholder="e.g. +1 234 567 890">
         <button>Next Step</button>
       </div>
-      <div class="step2 pagina">
+      <div class="step2 pagina pagina-selecionada">
         <h1>Select your plan</h1>
         <p>You have the option of monthly or yearly billing.</p>
         <div class="radio-image">
@@ -68,7 +68,11 @@
               <input type="radio" name="plano" id="arcade" value="arcade">
               <img src="./src/assets/images/icon-arcade.svg" alt="Feminino">
               <p class="titulo-plano">Arcade</p>
-              <p> $9/mo</p>
+              <p class="check-monthly"> $9/mo</p>
+              <div class="check-year desativado">
+                <p> $90/yr</p>
+                <p class="check-year-bid"> 2 Months free</p>
+              </div>
             </label>
           </div>
           <div class="radio-plano">
@@ -76,7 +80,11 @@
               <input type="radio" name="plano" id="advanced" value="advanced">
               <img src="./src/assets/images/icon-advanced.svg" alt="Masculino">
               <p class="titulo-plano">Advanced</p>
-              <p> $9/mo</p>
+              <p class="check-monthly"> $12/mo</p>
+              <div class="check-year desativado">
+                <p> $120/yr</p>
+                <p class="check-year-bid"> 2 Months free</p>
+              </div>
             </label>
           </div>    
           <div class="radio-plano">
@@ -84,7 +92,11 @@
               <input type="radio" name="plano" id="pro" value="pro">
               <img src="./src/assets/images/icon-pro.svg" alt="pro">
               <p class="titulo-plano">Pro</p>
-              <p> $9/mo</p>
+              <p class="check-monthly"> $15/mo</p>
+              <div class="check-year desativado">
+                <p> $150/yr</p>
+                <p class="check-year-bid"> 2 Months free</p>
+              </div>
             </label>
           </div>
         </div>
