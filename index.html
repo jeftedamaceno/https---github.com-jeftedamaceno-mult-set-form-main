@@ -48,7 +48,7 @@
       </ul>
     </div>
     <form>
-      <div class="personal_info pagina">
+      <div class="personal_info pagina  pagina-selecionada">
         <h1>Personal info</h1>
         <p>Please provide your name, email address, and phone number.</p>
         <label for="">Name</label>
@@ -59,7 +59,7 @@
         <input type="text" placeholder="e.g. +1 234 567 890">
         <button>Next Step</button>
       </div>
-      <div class="step2 pagina pagina-selecionada">
+      <div class="step2 pagina">
         <h1>Select your plan</h1>
         <p>You have the option of monthly or yearly billing.</p>
         <div class="radio-image">
@@ -67,7 +67,7 @@
             <label for="arcade">
               <input type="radio" name="plano" id="arcade" value="arcade">
               <img src="./src/assets/images/icon-arcade.svg" alt="Feminino">
-              <p class="titulo-plano">Arcade</p>
+              <p class="titulo-checkbox">Arcade</p>
               <p class="check-monthly"> $9/mo</p>
               <div class="check-year desativado">
                 <p> $90/yr</p>
@@ -79,7 +79,7 @@
             <label for="advanced">
               <input type="radio" name="plano" id="advanced" value="advanced">
               <img src="./src/assets/images/icon-advanced.svg" alt="Masculino">
-              <p class="titulo-plano">Advanced</p>
+              <p class="titulo-checkbox">Advanced</p>
               <p class="check-monthly"> $12/mo</p>
               <div class="check-year desativado">
                 <p> $120/yr</p>
@@ -91,7 +91,7 @@
             <label for="pro">
               <input type="radio" name="plano" id="pro" value="pro">
               <img src="./src/assets/images/icon-pro.svg" alt="pro">
-              <p class="titulo-plano">Pro</p>
+              <p class="titulo-checkbox">Pro</p>
               <p class="check-monthly"> $15/mo</p>
               <div class="check-year desativado">
                 <p> $150/yr</p>
@@ -114,33 +114,46 @@
         <button>Next Step</button>
       </div>
       <!-- <button>Next Step</button> -->
-      <div class="step3 pagina"></div>
+      <div class="step3 pagina">
+        <h1>Pick add-ons</h1>
+        <p>Add-ons help enhance your gaming experience.</p>
+        <label>
+          <div class="tipos-servicos">
+            <input type="checkbox" name="complementos" id="">
+            <div class="text-check">
+              <b><p class="titulo-checkbox">Online service</p></b>
+              <p>Access to multiplayer games</p>
+            </div>
+            <p class="check-preco">+$1/mo</p>
+          </div>
+        </label>
+        <label>
+          <div class="tipos-servicos">
+            <input type="checkbox" name="complementos" id="">
+            <div class="text-check">
+              <b><p class="titulo-checkbox">Larger storage</p></b>
+              <p>Extra 1TB of cloud save</p>
+            </div>
+            <p class="check-preco">+$2/mo</p>
+          </div>
+        </label>
+        <label>
+          <div class="tipos-servicos">
+            <input type="checkbox" name="complementos" id="">
+            <div class="text-check">
+              <b><p class="titulo-checkbox">Customizable Profile</p></b>
+              <p>Custom theme on your profile</p>
+            </div>
+            <p class="check-preco">+$2/mo</p>
+          </div>
+        </label>
+        <button class="bo-back">Go Back</button>
+        <button>Next Step</button>
+      </div>
       <div class="step4 pagina"></div>
     </form>
   </div>
 </main>
-  <!-- Step 2 start -->
-<!-- 
-  Select your plan
-  You have the option of monthly or yearly billing.
-
-  Arcade
-  $9/mo
-
-  Advanced
-  $12/mo
-
-  Pro
-  $15/mo
-
-  Monthly
-  Yearly
-
-  Go Back
-  Next Step -->
-
-  <!-- Step 2 end -->
-
   <!-- Step 3 start -->
 <!-- 
   Pick add-ons

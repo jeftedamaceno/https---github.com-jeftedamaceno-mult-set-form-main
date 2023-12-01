@@ -3,12 +3,14 @@
     margin: 0;
 
 }
-main{
+body{
     background-color: rgb(231, 229, 229);
+    font-family: "Outfit";
+}
+main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* font-family: "Ubuntu"; */
 }
 .componetes_form{
     margin-top: 50px;
@@ -18,7 +20,7 @@ main{
     align-items: center;
     margin: 20px;
     background-color: #fff;
-    font-family: "Outfit";
+    
 }
 form .componetes_form{
     margin: 20px 90px;
@@ -129,8 +131,7 @@ form .bo-back{
 .desativado{
     display: none;
 }
-.step2{
-    float: inline-end;
+.step2, .step3{
     padding: 40px;
     height: 500px;
     margin: 0px 45px;
@@ -176,7 +177,7 @@ form .step2 label > input{
     margin: 5px 0px 30px 12px;
 }
 
-.radio-plano .titulo-plano{   
+.titulo-checkbox{   
     opacity: 1;
     font-size: 17px;
     color:hsl(213, 96%, 18%);
@@ -246,3 +247,38 @@ form .step2 label > input{
     color: hsl(213, 96%, 18%); 
     opacity: 1;
 }
+/* criando step 3 */
+.step3 > p, h1{
+    margin-left:10px;
+}
+.step3 > p{
+    margin-bottom: 40px;
+}
+.tipos-servicos{
+    border:1px solid rgb(214, 211, 211);
+    border-radius:10px;
+    margin: 10px;
+    width: 420px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.text-check{
+    width: 260px;
+}
+.check-preco{
+    color: hsl(243, 100%, 62%);
+    opacity: 1;
+
+}
+.tipos-servicos input[type='checkbox']{
+    appearance: none;
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(255, 255, 255);
+    border:1px solid rgb(145, 144, 144);
+    border-radius: 5px;
+    margin: 20px;
+}
+
