@@ -263,10 +263,17 @@ form .step2 label > input{
     display: flex;
     align-items: center;
 }
+.tipos-servicos:hover{
+    cursor: pointer;
+    border:1px solid hsl(243, 100%, 62%);
+}
+.div-selecionado{
+    border:1px solid hsl(243, 100%, 62%); 
+}
 .text-check{
     width: 260px;
 }
-.check-preco{
+.check-preco, .check-preco-year{
     color: hsl(243, 100%, 62%);
     opacity: 1;
 
@@ -276,9 +283,17 @@ form .step2 label > input{
     -webkit-appearance: none;
     height: 20px;
     width: 20px;
-    background-color: rgb(255, 255, 255);
-    border:1px solid rgb(145, 144, 144);
-    border-radius: 5px;
+    background-color: rgb(194, 193, 193);
+    border-radius: 3px;
     margin: 20px;
+}
+.tipos-servicos input[type='checkbox']:checked{
+    background-image: url('../assets/images/square-check-solid.svg');
+    background-color: transparent;
+    height: 22px;
+    width: 20px;
+}
+label > input[type='checkbox']:checked + .tipos-servicos{
+    border:1px solid hsl(243, 100%, 62%);
 }
 
