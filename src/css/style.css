@@ -263,13 +263,14 @@ form .step2 label > input{
     display: flex;
     align-items: center;
 }
+.div-selecionada{
+    border:1px solid hsl(243, 100%, 62%); 
+}
 .tipos-servicos:hover{
     cursor: pointer;
     border:1px solid hsl(243, 100%, 62%);
 }
-.div-selecionado{
-    border:1px solid hsl(243, 100%, 62%); 
-}
+
 .text-check{
     width: 260px;
 }
@@ -292,8 +293,9 @@ form .step2 label > input{
     background-color: transparent;
     height: 22px;
     width: 20px;
+    display: block;
 }
-label > input[type='checkbox']:checked + .tipos-servicos{
+input[type='checkbox']:checked + .tipos-servicos{
     border:1px solid hsl(243, 100%, 62%);
 }
 

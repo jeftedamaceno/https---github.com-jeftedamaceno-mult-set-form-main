@@ -21,6 +21,24 @@ radios.forEach((radio,)=>{
     });
 });
 
+//  criando borda para input type radiio checkbox
+
+
+const servicos = document.querySelectorAll('.tipos-servicos');
+const servicos_inputs = document.querySelectorAll('#complementos');
+
+servicos.forEach((servico, indice)=>{
+    servico.addEventListener('click', function() {
+        if(!servico.classList.contains('div-selecionada')){
+            servico.classList.add('div-selecionada')
+            servicos_inputs[indice].checked = true
+        }else{
+            servico.classList.remove('div-selecionada')
+            servicos_inputs[indice].checked = false
+        }
+    })
+});
+
 // criando alteracao de texto ao clicar em input type checkbox
 
 const checkbox_time = document.querySelector('#switch');

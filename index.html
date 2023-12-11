@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit&family=Roboto&family=Rubik&family=Secular+One&display=swap" rel="stylesheet">
   <link rel="icon" type="./image/png" sizes="32x32" href="./src/assets/images/favicon-32x32.png">
-  
+  <script src="./src/js/index.js" defer></script>
   <title>Frontend Mentor | Multi-step form</title>
 </head>
 <body>
@@ -117,20 +117,21 @@
       <div class="step3 pagina pagina-selecionada">
         <h1>Pick add-ons</h1>
         <p>Add-ons help enhance your gaming experience.</p>
-        <label>
+                
+        <label for="tipos-servicos">
           <div class="tipos-servicos">
-            <input type="checkbox" name="complementos" id="">
+            <input type="checkbox" id="complementos">
             <div class="text-check">
               <b><p class="titulo-checkbox">Online service</p></b>
               <p>Access to multiplayer games</p>
             </div>
             <p class="check-preco">+$1/mo</p>
-            <p class="check-preco-year desativado">+$10/yr</p>
+            <p class="check-preco-year desativado" name="name-servico">+$10/yr</p>
           </div>
         </label>
-        <label>
+        <label for="tipos-servicos-storage">
           <div class="tipos-servicos ">
-            <input type="checkbox" name="complementos" id="">
+            <input type="checkbox" id="complementos">
             <div class="text-check">
               <b><p class="titulo-checkbox">Larger storage</p></b>
               <p>Extra 1TB of cloud save</p>
@@ -139,9 +140,9 @@
             <p class="check-preco-year desativado">+$20/yr</p>
           </div>
         </label>
-        <label>
+        <label for="tipos-servicos-Profile">
           <div class="tipos-servicos">
-            <input type="checkbox" name="complementos" id="">
+            <input type="checkbox" id="complementos">
             <div class="text-check">
               <b><p class="titulo-checkbox">Customizable Profile</p></b>
               <p>Custom theme on your profile</p>
@@ -202,6 +203,6 @@
   to email us at support@loremgaming.com. -->
 
   <!-- Step 5 end -->
-  <script src="./src/js/index.js"></script>
+  <!-- <script src="./src/js/index.js"></script> -->
 </body>
 </html>
