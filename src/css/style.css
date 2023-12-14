@@ -113,16 +113,17 @@ form button{
     right: 23%;
     cursor: pointer;
 }
-form .bo-back{
+form .go-back{
     position: absolute;
     top: 550px;
     right: 48.5%;
     background-color: #fff; 
-    border:1px solid hsl(213, 96%, 18%);
-    color: hsl(213, 96%, 18%); 
+    color: hsl(200, 1%, 59%); 
     cursor: pointer;
 }
-
+form .go-back:hover{
+    color: hsl(213, 96%, 18%);;
+}
 .botao_ativado{
     background-color: hsl(228, 100%, 84%);
     border: none; 
@@ -131,7 +132,7 @@ form .bo-back{
 .desativado{
     display: none;
 }
-.step2, .step3{
+.step2, .step3 ,.step4{
     padding: 40px;
     height: 500px;
     margin: 0px 45px;
@@ -299,3 +300,64 @@ input[type='checkbox']:checked + .tipos-servicos{
     border:1px solid hsl(243, 100%, 62%);
 }
 
+/* step 4 */
+.step4 p{
+    margin-left: 10px;
+}
+#chage{
+    margin-top: -15px;
+}
+.title-especificacao {
+    margin-bottom: 5px;
+    height: 70px;
+}
+.verificacao-dados{
+    background-color: rgb(245, 243, 243);
+    margin: 20px 10px;
+    padding: 5px
+}
+
+.verificacao-dados p{
+    width: 180px;
+}
+.especificacao{
+    display: flex;
+    align-items: center;
+}
+.especificacao p {
+    margin: 10px;
+}
+.check-preco-verificacao{
+    text-align: right;
+    color: hsl(213, 96%, 18%);
+    opacity: 1;
+}
+.step4 .titulo-checkbox{
+    margin: 10px;
+    margin-bottom: 0px;
+}
+.step4 .titulo-checkbox p{
+    margin: 5px;
+    
+}
+.step4 hr{
+    opacity: 0.5;
+    margin: 10px;
+}
+.especificacoes-total{
+    margin: 30px 10px;
+    display: flex;
+}
+.especificacoes-total p{
+    width: 180px;
+}
+#preco_final{
+    font-size: 22px;
+    width: 200px;
+    opacity: 1;
+    text-align: right;
+    color:hsl(243, 100%, 62%)
+}
+.confirme{
+    background-color:hsl(243, 100%, 62%)
+}
