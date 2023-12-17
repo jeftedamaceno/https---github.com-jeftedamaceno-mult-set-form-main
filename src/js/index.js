@@ -9,7 +9,12 @@ steps.forEach((step, indice)=>{
         paginas[indice].classList.add("pagina-selecionada");
     });
 })
+// next step 
+const nexts = document.querySelectorAll('.button-next')
+nextStepAndGoBack(nexts, 1)
 
+const go_backs = document.querySelectorAll('.go-back')
+nextStepAndGoBack(go_backs, 0)
 //  criando borda para input type radiio selecionado
 
 const radios = document.querySelectorAll('.radio-plano')
@@ -27,7 +32,7 @@ radios.forEach((radio,)=>{
 const servicos = document.querySelectorAll('.tipos-servicos');
 const servicos_inputs = document.querySelectorAll('#complementos');
 
-servicos.forEach((servico, indice)=>{
+servicos.forEach((servico, indice)=>{ 
     servico.addEventListener('click', function() {
         if(!servico.classList.contains('div-selecionada')){
             servico.classList.add('div-selecionada')
@@ -68,6 +73,7 @@ checkbox_time.addEventListener('click', ()=>{
     }
 });
 
+
 // funcoes usadas
 function desselecionarPagina() {
     const paginaSelecionado = document.querySelector(".pagina-selecionada");
@@ -89,4 +95,15 @@ function alteraTextoCheckbox(lista_check1, lista_check2) {
         lista.classList.remove('desativado')
         lista_check2[indice].classList.add('desativado')
     });
+}
+
+function nextStepAndGoBack(lista,regulador) {
+    lista.forEach((item, indice)=>{
+        item.addEventListener('click', ()=>{
+            desselecionarPagina()
+            desselecionarStep()
+            paginas[indice+regulador].classList.add("pagina-selecionada");
+            steps[indice+regulador].classList.add("botao_ativado");
+        })
+    })
 }

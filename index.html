@@ -39,7 +39,7 @@
           </div>
         </li>
         <li>  
-          <button class="botao">4</button>
+          <button id="step4" class="botao">4</button>
           <div class="botao-texto">
             <p class="step">Step 4 </p> 
             <p >Summary</p>
@@ -48,16 +48,16 @@
       </ul>
     </div>
     <form>
-      <div class="personal_info pagina">
+      <div class="personal_info pagina pagina-selecionada">
         <h1>Personal info</h1>
         <p>Please provide your name, email address, and phone number.</p>
         <label for="">Name</label>
-        <input type="text" placeholder="e.g. Stephen King">
+        <input id="nome" type="text" placeholder="e.g. Stephen King" >
         <label for="">Email Address</label>
-        <input type="text" placeholder="e.g. stephenking@lorem.com">
+        <input name = "email" type="email" placeholder="e.g. stephenking@lorem.com" >
         <label for="">Phone Number</label>
-        <input type="text" placeholder="e.g. +1 234 567 890">
-        <button>Next Step</button>
+        <input name = "telefone" type="text" placeholder="e.g. +1 234 567 890" >
+        <button type="button" class="button-next">Next Step</button>
       </div>
       <div class="step2 pagina">
         <h1>Select your plan</h1>
@@ -110,8 +110,8 @@
             <p id="yearly" ><b>Yearly</b></p>
           </div>
         </div>
-        <button class="go-back"><b>Go Back</b></button>
-        <button>Next Step</button>
+        <button type="button" class="go-back"><b>Go Back</b></button>
+        <button type="button" class="button-next">Next Step</button>
       </div>
       <!-- <button>Next Step</button> -->
       <div class="step3 pagina">
@@ -120,7 +120,7 @@
                 
         <label for="tipos-servicos">
           <div class="tipos-servicos">
-            <input type="checkbox" id="complementos">
+            <input type="checkbox" id="complementos" value="Online-service">
             <div class="text-check">
               <b><p class="titulo-checkbox">Online service</p></b>
               <p>Access to multiplayer games</p>
@@ -131,7 +131,7 @@
         </label>
         <label for="tipos-servicos-storage">
           <div class="tipos-servicos ">
-            <input type="checkbox" id="complementos">
+            <input type="checkbox" id="complementos" value="Larger-storage">
             <div class="text-check">
               <b><p class="titulo-checkbox">Larger storage</p></b>
               <p>Extra 1TB of cloud save</p>
@@ -142,7 +142,7 @@
         </label>
         <label for="tipos-servicos-Profile">
           <div class="tipos-servicos">
-            <input type="checkbox" id="complementos">
+            <input type="checkbox" id="complementos" value="Customizable-Profile">
             <div class="text-check">
               <b><p class="titulo-checkbox">Customizable Profile</p></b>
               <p>Custom theme on your profile</p>
@@ -151,10 +151,10 @@
             <p class="check-preco-year desativado">+$20/yr</p>
           </div>
         </label>
-        <button class="go-back"><b>Go Back</b></button>
-        <button>Next Step</button>
+        <button type="button" class="go-back"><b>Go Back</b></button>
+        <button type="button" class="button-next">Next Step</button>
       </div>
-      <div class="step4 pagina pagina-selecionada ">
+      <div class="step4 pagina">
         <h1>Finishing up</h1>
         <p>Double-check everything looks OK before confirming.</p>
         <div class="verificacao-dados">
@@ -179,7 +179,7 @@
           <p>total (per yearly) </p>
           <b><p id="preco_final">120/yr</p></b>
         </div>
-        <button class="go-back"><b>Go Back</b></button>
+        <button type="button" class="go-back"><b>Go Back</b></button>
         <button class="confirme">Confirm</button>
       </div>
     </form>
@@ -209,5 +209,6 @@
 
   <!-- Step 5 end -->
   <!-- <script src="./src/js/index.js"></script> -->
+  <!-- <script src="./src/js/index.js" defer></script> -->
 </body>
 </html>
