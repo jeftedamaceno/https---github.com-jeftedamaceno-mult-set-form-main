@@ -15,6 +15,7 @@ nextStepAndGoBack(nexts, 1)
 
 const go_backs = document.querySelectorAll('.go-back')
 nextStepAndGoBack(go_backs, 0)
+
 //  criando borda para input type radiio selecionado
 
 const radios = document.querySelectorAll('.radio-plano')
@@ -72,8 +73,44 @@ checkbox_time.addEventListener('click', ()=>{
         year_check_paragrafo.classList.add('input-seleceinado')
     }
 });
-
-
+// validacoes de dados
+function validacaoPersonalInfo() {
+    nome = document.getElementById("nome").value
+    email = document.getElementById("email").value
+    telefone = document.getElementById("telefone").value
+    const spans = document.querySelectorAll('.label-span')
+    validacao=false
+    if(!validateEmail(email)){
+        spans[1].style.display = "block";
+        
+    }else{
+        validacao=false
+        spans[1].style.display = "none";
+    }
+    lista = [nome, email, telefone]
+    if(nome.replace(/\s+/g, '').length == 0){
+        spans[0].style.display = "block";
+    }
+    else{
+        validacao=false
+        spans[0].style.display = "none";
+    }
+   
+    if(telefone.replace(/\s+/g, '').length == 0){
+        spans[2].style.display = "block";
+    }
+    
+    else{
+        validacao=false
+        spans[2].style.display = "none";
+    }
+    return validacao
+    
+}
+const validateEmail = (email) => {
+    const re = /\S+@\S+\.\S+/;
+    return re.test(email);
+};
 // funcoes usadas
 function desselecionarPagina() {
     const paginaSelecionado = document.querySelector(".pagina-selecionada");
@@ -100,10 +137,13 @@ function alteraTextoCheckbox(lista_check1, lista_check2) {
 function nextStepAndGoBack(lista,regulador) {
     lista.forEach((item, indice)=>{
         item.addEventListener('click', ()=>{
-            desselecionarPagina()
-            desselecionarStep()
-            paginas[indice+regulador].classList.add("pagina-selecionada");
-            steps[indice+regulador].classList.add("botao_ativado");
+            if(validacaoPersonalInfo()){
+                desselecionarPagina()
+                desselecionarStep()
+                paginas[indice+regulador].classList.add("pagina-selecionada");
+                steps[indice+regulador].classList.add("botao_ativado");
+            }
+            
         })
     })
 }

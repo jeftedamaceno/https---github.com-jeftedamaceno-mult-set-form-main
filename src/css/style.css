@@ -361,3 +361,14 @@ input[type='checkbox']:checked + .tipos-servicos{
 .confirme{
     background-color:hsl(243, 100%, 62%)
 }
+/* span */
+.label-span{
+    color: red;
+    display: none;
+}
+.info-label{
+    display: flex;
+}
+.info-label label{
+    width: 65%;
+}
