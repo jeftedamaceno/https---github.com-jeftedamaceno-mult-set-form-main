@@ -363,7 +363,7 @@ input[type='checkbox']:checked + .tipos-servicos{
 }
 /* span */
 .label-span{
-    color: red;
+    color: rgb(243, 22, 22);
     display: none;
 }
 .info-label{

@@ -80,11 +80,12 @@ function validacaoPersonalInfo() {
     telefone = document.getElementById("telefone").value
     const spans = document.querySelectorAll('.label-span')
     validacao=false
+    // validacao do step1
     if(!validateEmail(email)){
         spans[1].style.display = "block";
         
     }else{
-        validacao=false
+        validacao=true
         spans[1].style.display = "none";
     }
     lista = [nome, email, telefone]
@@ -92,7 +93,7 @@ function validacaoPersonalInfo() {
         spans[0].style.display = "block";
     }
     else{
-        validacao=false
+        validacao=true
         spans[0].style.display = "none";
     }
    
@@ -101,11 +102,20 @@ function validacaoPersonalInfo() {
     }
     
     else{
-        validacao=false
+        validacao=true
         spans[2].style.display = "none";
     }
     return validacao
     
+    
+}
+function validacaoStep2() {
+    validacao_step2=false
+    radios_step2 =  document.querySelector("input[name='plano']:checked").value
+    if(radios_step2 == 'arcade' || radios_step2== 'advanced' || radios_step2== 'pro'){
+        validacao_step2 = true
+    }
+    return validacao_step2
 }
 const validateEmail = (email) => {
     const re = /\S+@\S+\.\S+/;
@@ -140,10 +150,17 @@ function nextStepAndGoBack(lista,regulador) {
             if(validacaoPersonalInfo()){
                 desselecionarPagina()
                 desselecionarStep()
-                paginas[indice+regulador].classList.add("pagina-selecionada");
-                steps[indice+regulador].classList.add("botao_ativado");
+                paginas[0+regulador].classList.add("pagina-selecionada");
+                steps[0+regulador].classList.add("botao_ativado");
+                alert('1')
+                if(validacaoStep2()){
+                    desselecionarPagina()
+                    desselecionarStep()
+                    paginas[indice+regulador].classList.add("pagina-selecionada");
+                    steps[indice+regulador].classList.add("botao_ativado");
+                    alert(2)
+                }
             }
-            
         })
     })
 }
